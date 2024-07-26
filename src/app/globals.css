@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Main content area */
+.main-content {
+  @apply pl-64; /* Add padding to the left side of the main content */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -154,9 +159,10 @@
   }
 
   /* Right sidebar */
-  .right-sidebar {
-    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll !important;
-  }
+.right-sidebar {
+  @apply fixed top-0 right-0 h-screen max-h-screen flex-col border-l border-gray-200 xl:flex min-w-[300px] 2xl:min-w-[355px] xl:overflow-y-scroll !important;
+  z-index: 10; /* Add a z-index to ensure it appears on top of other elements */
+}
 
   .profile-banner {
     @apply h-[120px] w-full bg-gradient-mesh bg-cover bg-no-repeat;
