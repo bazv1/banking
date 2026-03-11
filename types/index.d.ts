@@ -82,6 +82,7 @@ declare type Transaction = {
 };
 
 declare type Bank = {
+  shareableId: any;
   $id: string;
   accountId: string;
   bankId: string;
